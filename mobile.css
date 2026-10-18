@@ -1,0 +1,112 @@
+/* 휴대폰·태블릿 레이아웃 — 인라인 스타일을 덮어쓰므로 !important 사용 */
+html { -webkit-text-size-adjust: 100%; }
+img { max-width: 100%; }
+
+@media (max-width: 820px) {
+  /* 데모 이동 바: 한 줄 가로 스크롤 */
+  #demo-bar { flex-wrap: nowrap !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch; padding: 8px 10px !important; gap: 6px !important; scrollbar-width: none; }
+  #demo-bar::-webkit-scrollbar { display: none; }
+  #demo-bar > span:last-child { display: none !important; }
+  #demo-bar b { white-space: nowrap; }
+
+  /* 상단 공지 */
+  body > div > div:first-of-type[style*="text-align:center"] { font-size: 12px !important; padding: 7px 12px !important; line-height: 1.5; }
+
+  /* 헤더: 로고 + 아이콘 한 줄, 메뉴는 가로 스크롤 줄 */
+  header > div { height: auto !important; padding: 10px 14px !important; gap: 10px !important; align-items: center !important; }
+  header > div > a:first-child { order: 0; }
+  header > div > div[style*="margin-left:auto"] { order: 1; margin-left: auto !important; gap: 10px !important; }
+  header > div > div[style*="margin-left:auto"] form { display: none !important; }
+  header > div > div[style*="margin-left:auto"] > a[style*="font-size:14px"]:not([aria-label]) { display: none !important; }
+  header nav { order: 2; flex-basis: 100% !important; width: 100%; flex-wrap: nowrap !important; overflow-x: auto !important; gap: 18px !important; padding-bottom: 2px; font-size: 14px !important; scrollbar-width: none; }
+  header nav::-webkit-scrollbar { display: none; }
+  header nav a { white-space: nowrap; }
+
+  /* 그리드: 12열 → 1열, 4·5·3열 → 2열, 2열 → 1열 */
+  [style*="grid-template-columns:repeat(12"] { grid-template-columns: 1fr !important; gap: 14px !important; }
+  [style*="grid-column:span 7"], [style*="grid-column:span 5"], [style*="grid-column:span 2"] { grid-column: auto !important; }
+  [style*="grid-template-columns:repeat(4"], [style*="grid-template-columns:repeat(5"], [style*="grid-template-columns:repeat(3"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px !important; }
+  [style*="grid-template-columns:repeat(2"] { grid-template-columns: 1fr !important; gap: 10px !important; }
+  [style*="grid-template-columns:repeat(6"] { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; gap: 4px !important; }
+  [style*="grid-template-rows:repeat(2"] { grid-template-rows: auto !important; gap: 10px !important; }
+
+  /* 본문 여백·제목 크기 */
+  section, main, [style*="max-width:1200px"] { padding-left: 14px !important; padding-right: 14px !important; }
+  h1[style*="font-size:44px"] { font-size: 28px !important; }
+  h1[style*="font-size:34px"], h1[style*="font-size:32px"] { font-size: 26px !important; }
+  h2[style*="font-size:26px"] { font-size: 21px !important; }
+  [style*="min-height:520px"] { min-height: 360px !important; }
+  [style*="min-height:248px"] { min-height: 170px !important; }
+  [style*="padding:36px"] { padding: 18px !important; }
+  [style*="font-size:30px"] { font-size: 26px !important; }
+
+  /* 본문+사이드 2단 → 세로 */
+  aside { max-width: 100% !important; flex-basis: 100% !important; position: static !important; }
+  [style*="flex:1 1 480px"], [style*="flex:1 1 440px"], [style*="flex:999 1 560px"] { flex-basis: 100% !important; }
+  [style*="position:sticky"] { position: static !important; }
+
+  /* 카드·버튼 */
+  [style*="padding:32px"] { padding: 18px !important; }
+  [style*="padding:22px"], [style*="padding:24px"] { padding: 16px !important; }
+  a[style*="padding:14px 22px"] { padding: 12px 16px !important; font-size: 14px !important; }
+  [style*="white-space:nowrap"] { white-space: normal !important; }
+  [style*="width:120px;height:120px"] { width: 96px !important; height: 96px !important; }
+  [style*="width:200px;height:200px"] { width: 140px !important; height: 140px !important; }
+
+  /* 표: 가로 스크롤 */
+  table { display: block; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+  table[style*="border-collapse"] td, table[style*="border-collapse"] th { white-space: normal; }
+  main table[style*="width:100%"] { display: table; }
+
+  /* 상세 페이지 규격표는 그대로 표로 */
+  [style*="border-top:1px solid #E6E1D6"] th { width: 70px !important; }
+
+  /* 옵션 박스: 체크박스/버튼 줄바꿈 */
+  [style*="display:flex;gap:14px;align-items:flex-start"] { flex-wrap: wrap !important; }
+  [style*="display:flex;gap:14px;align-items:flex-start"] > a, [style*="display:flex;gap:14px;align-items:flex-start"] > div[style*="font-weight:700;font-size:15px"] { margin-left: 32px; }
+
+  /* 관리자: 사이드 메뉴를 위로 */
+  aside[style*="flex:0 0 220px"] { flex-basis: 100% !important; display: flex !important; flex-wrap: wrap !important; padding: 10px !important; gap: 2px; }
+  aside[style*="flex:0 0 220px"] > a { padding: 8px 10px !important; border-left: 0 !important; border-radius: 6px; font-size: 13px !important; }
+  aside[style*="flex:0 0 220px"] > div { width: 100%; }
+  aside[style*="flex:0 0 220px"] > div[style*="letter-spacing"] { display: none !important; }
+  aside[style*="flex:0 0 220px"] > div[style*="margin:20px 16px 0"] { margin: 8px 0 0 !important; }
+
+  /* 푸터 */
+  footer > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 16px !important; padding: 24px 14px !important; }
+}
+
+@media (max-width: 480px) {
+  [style*="grid-template-columns:repeat(4"], [style*="grid-template-columns:repeat(3"] { gap: 8px !important; }
+  [style*="font-weight:700;font-size:16px"] { font-size: 15px !important; }
+  [style*="font-weight:700;font-size:18px"] { font-size: 16px !important; }
+  [style*="font-size:12px;color:#6B665C;margin-top:4px"] { font-size: 11px !important; }
+  [style*="padding:14px"][style*="display:block"] > div, a[style*="border-radius:12px;overflow:hidden;display:block"] > div[style*="padding:14px"] { padding: 10px !important; }
+  [style*="aspect-ratio:3/4"] { aspect-ratio: 1/1 !important; }
+  [style*="display:flex;gap:10px;margin-top:14px"] { flex-wrap: wrap; }
+}
+
+/* 추가 보정 */
+@media (max-width: 820px) {
+  /* 사진+글 가로 카드가 든 그리드는 1열 */
+  [style*="grid-template-columns:repeat(4"]:has(> [style*="display:flex;gap:14px"]),
+  [style*="grid-template-columns:repeat(3"]:has(> [style*="display:flex;gap:14px"]) { grid-template-columns: 1fr !important; }
+  /* 일지 빠른 기록 줄 */
+  [style*="display:flex;gap:12px;align-items:center;margin-bottom:14px"] { flex-wrap: wrap !important; }
+  [style*="display:flex;gap:12px;align-items:center;margin-bottom:14px"] > div { flex-wrap: wrap; }
+  [style*="display:flex;gap:12px;align-items:center;margin-bottom:14px"] > input { flex-basis: 100% !important; min-width: 0; box-sizing: border-box; }
+  /* 관리자 사이드 메뉴·표 */
+  aside[style*="flex:0 0 220px"] { box-sizing: border-box; width: 100%; max-width: 100%; }
+  aside[style*="flex:0 0 220px"] > div[style*="padding:0 20px 18px"] { padding: 6px 10px 10px !important; box-sizing: border-box; }
+  aside[style*="flex:0 0 220px"] > div[style*="margin:20px 16px 0"] { box-sizing: border-box; }
+  div[style*="flex:999 1 560px"][style*="padding:24px 28px"] { padding: 16px 14px !important; max-width: 100%; box-sizing: border-box; }
+  div[style*="overflow-x:auto"] { max-width: 100%; }
+}
+@media (max-width: 820px) {
+  /* 알약 묶음은 줄바꿈 */
+  [style*="display:flex;gap:6px;font-size:13px"], [style*="display:flex;gap:8px;font-size:13px"], [style*="display:flex;gap:8px;flex-wrap:wrap;font-size:13px"] { flex-wrap: wrap !important; }
+  [style*="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px"] { flex-wrap: wrap; gap: 8px; }
+  /* 필터·사이드 정보는 본문 뒤로 (관리자 메뉴는 앞) */
+  aside { order: 2; }
+  aside[style*="flex:0 0 220px"] { order: 0; }
+}
