@@ -29,6 +29,7 @@ table{border-collapse:collapse;width:100%;font-family:'Noto Sans KR',sans-serif;
 th,td{border-top:1px solid #D7D4CC;border-bottom:1px solid #D7D4CC;padding:8px 8px;text-align:left;vertical-align:top}
 thead th{border-top:2px solid #111;border-bottom:1px solid #111;font-weight:700;background:none}
 tbody tr:last-child td{border-bottom:2px solid #111}
+td:first-child,th:first-child{white-space:nowrap}
 caption{caption-side:top;text-align:left;font-size:12px;color:#555;padding:0 0 6px}
 code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;background:#F2F1ED;padding:1px 4px}
 a{color:#1a4d2e}
@@ -39,7 +40,7 @@ hr{border:0;border-top:1px solid #D7D4CC;margin:36px 0 18px}
   h2{font-size:18px;margin-top:34px}
   table.meta{display:block;white-space:normal;overflow:visible} .meta tbody{display:block} .meta tr{display:grid;grid-template-columns:88px 1fr}
   .meta th,.meta td{display:block;border:0;padding:5px 0;min-width:0;white-space:normal} .meta td{border-bottom:1px solid #E3E1DB} .meta td[colspan]{grid-column:1 / -1}
-  table{display:block;overflow-x:auto;white-space:nowrap} td,th{white-space:normal;min-width:110px}
+  table{display:block;overflow-x:auto;white-space:nowrap} td,th{white-space:normal;min-width:110px} td:first-child,th:first-child{white-space:nowrap;min-width:0}
   p{text-align:left}
 }
 @media print{ body{background:#fff} .topbar{display:none} .paper{border:0;margin:0;padding:0;max-width:none} h2{break-after:avoid} table{break-inside:avoid} }
@@ -54,8 +55,8 @@ hr{border:0;border-top:1px solid #D7D4CC;margin:36px 0 18px}
 </div>
 <table class="meta">
 <tr><th>문서 번호</th><td>IKB-PLAN-2026-001</td><th>버전</th><td>1차안 (v0.1)</td></tr>
-<tr><th>작성일</th><td>2026년 10월 18일</td><th>작성</th><td>이키본 준비팀</td></tr>
-<tr><th>대상</th><td>대표, 분재원 파트너, 개발 담당</td><th>상태</th><td>검토 중 — 4개 결정 사항 대기</td></tr>
+<tr><th>작성일</th><td>2026년 10월 18일</td><th>작성</th><td>김 대표 (개발·운영·마케팅)</td></tr>
+<tr><th>대상</th><td>분재원 대표 (사이트·계정 소유주)</td><th>상태</th><td>검토 요청 — 함께 정할 것 5건</td></tr>
 <tr><th>관련 자료</th><td colspan="3"><a href="index.html">데모 화면 10개</a> · 참고 사이트 Bonsai Plaza(네덜란드) · 이키본 사이트 시안</td></tr>
 </table>
 <div class="toc-t">목 차</div>
@@ -68,15 +69,15 @@ hr{border:0;border-top:1px solid #D7D4CC;margin:36px 0 18px}
 <li><a href="#한국형으로-바꾼-것"><span>6. 국내 환경 적용 사항</span><span class="dots"></span></a></li>
 <li><a href="#데이터-구조-어떤-표가-있고-서로-어떻게-연결되나"><span>7. 데이터 구조</span><span class="dots"></span></a></li>
 <li><a href="#도구와-스킬-무엇을-왜-쓰나"><span>8. 기술 구성 및 도구</span><span class="dots"></span></a></li>
-<li><a href="#가상-인력-ai-에이전트-8개와-사람-2명"><span>9. 조직 구성 (AI 에이전트 8 · 인력 2)</span><span class="dots"></span></a></li>
+<li><a href="#가상-인력-ai-에이전트-8개와-사람-2명"><span>9. 역할 분담 (분재원 대표 · 김 대표 · AI)</span><span class="dots"></span></a></li>
 <li><a href="#헤르메스와-텔레그램으로-운영하기-마케팅-자동화"><span>10. 운영 자동화 (헤르메스·마케팅)</span><span class="dots"></span></a></li>
 <li><a href="#일정-단축하는-방법과-단계"><span>11. 추진 일정</span><span class="dots"></span></a></li>
-<li><a href="#아직-정해야-할-것-위험-반대-의견"><span>12. 결정 사항 · 위험 · 의견</span><span class="dots"></span></a></li>
+<li><a href="#아직-정해야-할-것-위험-반대-의견"><span>12. 함께 정할 것 · 위험 · 의견</span><span class="dots"></span></a></li>
 </ol>
 <h2 id="한-문단으로-말하면"><span class="num">1.</span> 개요</h2>
 <p>이키본은 &quot;사진 속 그 나무를 그대로 받고, 받기 전에 화분·철사·사리 작업까지 주문하는&quot; 한국형 분재 전문몰입니다. 유럽 분재몰(Bonsai Plaza)의 &quot;나무 한 그루 = 상품 하나&quot; 방식을 가져오고, 거기에 쿠팡처럼 옵션을 고르는 경험을 붙였습니다. 사고 나서는 &quot;내 분재 일지&quot;가 자동으로 생겨 물 주기·철사 제거·분갈이 시기를 알림톡으로 알려주고, 궁금한 건 장인이 답합니다. 쇼핑몰과 커뮤니티가 같은 로그인, 같은 데이터 위에 있어서 &quot;산 나무 → 키우는 기록 → 다음 작업 주문&quot;이 한 바퀴로 돕니다.</p>
 <p>데모 화면 10개는 <a href="index.html">이키본 분재 — 핵심 화면 10종 데모</a>에서 볼 수 있습니다. 화면 속 사진은 위키미디어 공용(CC 라이선스) 실제 분재 사진이고, 나무 이름·가격·치수는 예시입니다.</p>
-<p>이 문서는 &quot;처음 듣는 사람도 오해 없이 이해하도록&quot; 쉬운 말로 썼습니다. 전문용어는 처음 나올 때 괄호로 풀었습니다.</p>
+<p>역할은 둘로 나눕니다. 분재원 대표가 나무·손 작업·발송과 사이트·계정의 소유권을, 김 대표가 개발·시스템·마케팅·운영 자동화를 맡습니다(9절). 이 문서는 분재원 대표가 전체 그림을 한 번에 보시도록 쉬운 말로 썼고, 전문용어는 처음 나올 때 괄호로 풀었습니다.</p>
 <h2 id="분재-이것만-알면-됩니다"><span class="num">2.</span> 분재 기초 지식</h2>
 <p>분재는 &quot;작은 나무&quot;가 아니라 &quot;사람이 수십 년 동안 모양을 만든 나무&quot;입니다. 그래서 가격은 크기가 아니라 나이, 줄기 굽기, 뿌리 퍼짐, 모양의 완성도로 정해집니다. 같은 30cm 소나무가 5만 원일 수도, 200만 원일 수도 있는 이유입니다.</p>
 <p>나무를 설명할 때 쓰는 네 가지 숫자 (시안에도 있던 항목이고, 국내 분재계에서 쓰는 말 그대로 썼습니다):</p>
@@ -128,10 +129,8 @@ hr{border:0;border-top:1px solid #D7D4CC;margin:36px 0 18px}
 <p>클로드 코드 스킬 — 스킬은 &quot;클로드가 특정 일을 잘하도록 넣어주는 설명서 묶음&quot;입니다.</p>
 <ul><li><p><code>medusajs/medusa-agent-skills</code> — Medusa 회사가 직접 만든 공식 스킬 17개. 설치는 프로젝트 폴더에서 <code>npx -y skills add medusajs/medusa-agent-skills --agent claude-code</code> 한 줄. 실제로 쓰는 건 <code>building-with-medusa</code>(백엔드·모듈), <code>storefront-best-practices</code>(화면), <code>db-generate</code>·<code>db-migrate</code>(DB 변경), <code>new-user</code>(관리자 계정), 나중에 <code>creating-agents-in-medusa</code>(관리자용 AI 비서).</p></li><li><p>프로젝트 전용 <code>CLAUDE.md</code> — 분재 용어표, 크기 등급, 시즌 규칙, 한국 결제 규칙을 적어두는 파일. 클로드 코드가 매번 같은 기준으로 코드를 쓰게 만듭니다.</p></li><li><p><code>.claude/agents/</code> — 아래 &quot;가상 인력&quot; 8개를 각각 파일 하나로 정의.</p></li><li><p>커뮤니티·결제용 별도 스킬은 쓸 만한 게 없어서 추가하지 않습니다.</p></li></ul>
 <p>검토하고 제외한 것: Bagisto(PHP, 옵션 구조가 유연하지 않음), Discourse 포럼 붙이기(로그인·데이터가 분리돼서 &quot;결합&quot;이 안 됨), 카페24(옵션 서비스와 AI 사리 구현 불가).</p>
-<h2 id="가상-인력-ai-에이전트-8개와-사람-2명"><span class="num">9.</span> 조직 구성 (AI 에이전트 8 · 인력 2)</h2>
-<p>역할 8개 중 6개는 AI가 맡고, 분재 장인과 포장·발송은 사람이 해야 합니다. &quot;전원 AI&quot;로 가면 첫 분쟁에서 사업이 무너집니다. AI 에이전트는 클로드 코드에서 &quot;서브에이전트&quot;(각자 지시문과 도구를 가진 분신)로 파일 하나씩 정의합니다.</p>
-<table><thead><tr><th>역할</th><th>누가</th><th>하는 일</th><th>한계</th></tr></thead><tbody><tr><td>총괄 프로듀서</td><td>AI (클로드 코드 메인)</td><td>대표 지시를 받아 일을 나누고 결과를 모아 보고</td><td>돈·계약 결정은 대표</td></tr><tr><td>사이트 개발자</td><td>AI</td><td>Medusa 스킬로 코드 작성, Codex가 2차 리뷰</td><td>운영 반영은 대표 승인 후</td></tr><tr><td>분재 지식 전문가</td><td>AI</td><td>상품 설명, 관리 가이드, 시즌 규칙, 질문 답변 초안</td><td>국내 분재 서적·협회 자료를 지식 파일로 넣어야 헛소리 안 함</td></tr><tr><td>분재 장인</td><td><strong>사람</strong> (파트너 분재원) + AI 보조</td><td>실제 시공. AI는 견적 초안·난이도 판정·사리 미리보기·고객 설명까지</td><td>이 파트너가 없으면 옵션 서비스 전체가 공중에 림</td></tr><tr><td>마케팅</td><td>AI</td><td>주간 콘텐츠 계획, 쇼츠·릴스 대본, 블로그 글, 성과 리포트</td><td>발행 전 승인</td></tr><tr><td>홍보(PR)</td><td>AI</td><td>보도자료, 협회·동호회 제휴 메일 초안, 전시회 일정 모니터링</td><td>실제 발송은 대표 승인 후</td></tr><tr><td>운영·배송</td><td>AI 반 + <strong>사람</strong> 반</td><td>AI: 발송 가능 요일 계산, 특보 보류 판단, 송장 등록, 재고 갱신. 사람: 포장하고 택배 부르기</td><td>분재원이 겸하는 게 자연스러움</td></tr><tr><td>CS</td><td>AI 1차 + <strong>사람</strong> 2차</td><td>AI가 알림톡·채팅 질문에 먼저 답하고, 환불·고사 분쟁은 텔레그램으로 대표에게</td><td>돈이 걸린 건은 사람</td></tr></tbody></table>
-<p>정리하면 사람 2명(분재원 파트너 1, 포장·발송 1 — 같은 사람일 수 있음) + AI 에이전트 8개가 실제 구성입니다. 비용을 위해 역할별로 모델을 나눕니다: 개발·장인 판단은 상위 모델, CS 분류·송장 등록 같은 단순 작업은 하위 모델.</p>
+<h2 id="가상-인력-ai-에이전트-8개와-사람-2명"><span class="num">9.</span> 역할 분담 (분재원 대표 · 김 대표 · AI)</h2>
+<p>이 사업은 두 사람이 나눠 맡습니다. 분재원 대표가 나무와 손 작업, 발송, 그리고 사이트와 계정의 소유권을 가지고, 김 대표가 개발·시스템·마케팅·운영 자동화를 맡습니다. AI가 할 수 있는 일은 전부 김 대표 쪽에서 세팅하고 책임집니다.</p><table><thead><tr><th>구분</th><th>분재원 대표 (소유주)</th><th>김 대표 (개발·운영)</th></tr></thead><tbody><tr><td>소유권·명의</td><td>사이트, 도메인, 서버·깃허브 계정, 결제사 계약, 카카오 채널, 네이버·인스타·유튜브 계정 — 모두 분재원 대표 명의</td><td>관리자 권한으로 접근. 명의는 가지지 않음</td></tr><tr><td>나무·상품 정보</td><td>나무 확보, 사진 촬영, 규격·수령·가격 정보 제공</td><td>받은 사진·정보를 상품으로 등록 (자동화)</td></tr><tr><td>손 작업</td><td>사리·신, 철사걸이, 분갈이 시공. 사리 견적 판단</td><td>견적 초안·작업 일정·고객 안내는 AI가 준비</td></tr><tr><td>포장·발송</td><td>포장하고 택배 보내기</td><td>발송 요일 계산, 송장 발급·등록, 특보 보류, 고객 알림톡 — 자동화</td></tr><tr><td>고객 응대</td><td>AI가 못 푸는 건(환불·고사 분쟁, 전문 질문) 2차 응대</td><td>1차 응대 AI 세팅, 전달 규칙 관리</td></tr><tr><td>개발·시스템</td><td>—</td><td>사이트 개발, 서버·결제·알림톡 연동, 헤르메스, 유지보수</td></tr><tr><td>홍보·마케팅</td><td>작업 영상·사진 제공</td><td>네이버 블로그·인스타·유튜브 개설, 콘텐츠 제작, 자동 발행, 성과 관리</td></tr><tr><td>운영 판단</td><td>가격, 공임, 환불 결정</td><td>운영 데이터·리포트 제공</td></tr></tbody></table><p>AI는 김 대표 아래에서 역할별로 나눠 돌아갑니다: 개발, 분재 지식(상품 설명·관리 가이드·답변 초안), 마케팅(콘텐츠 계획·대본·글), 운영(발송·송장·재고), CS 1차, 그리고 이들을 묶는 총괄 에이전트. 분재원 대표는 이 구조를 알 필요 없이, 텔레그램으로 오는 요청(견적 확인, 작업 사진 올리기, 2차 CS)에만 답하면 됩니다.</p>
 <h2 id="헤르메스와-텔레그램으로-운영하기-마케팅-자동화"><span class="num">10.</span> 운영 자동화 (헤르메스·마케팅)</h2>
 <p>헤르메스는 텔레그램으로 말을 걸면 클로드를 불러 일을 하는 오픈소스 비서입니다. Nous Research가 만들었고, Anthropic을 정식 지원하며, 텔레그램 봇 토큰과 클로드 API 키만 넣으면 돌아갑니다. 대표님 맥미니에 <code>.hermes</code> 폴더가 이미 있는 걸 보면 설치는 된 상태입니다.</p>
 <table class="flow"><caption>표. 헤르메스 처리 경로</caption>
@@ -143,24 +142,17 @@ hr{border:0;border-top:1px solid #D7D4CC;margin:36px 0 18px}
 <p>위쪽 갈래(운영 작업)는 바로 실행합니다. &quot;소사나무 새 상품 등록해&quot;, &quot;이번 주 쇼츠 3개 올려&quot;, &quot;어제 CS 미답변 정리해&quot; 같은 건 헤르메스가 Medusa 관리자 API와 업로드 도구를 불러 처리하고 결과를 텔레그램으로 보고합니다. 아래쪽 갈래(코드 수정)는 헤르메스가 코드를 고쳐 GitHub에 수정 제안을 올리고 → Codex가 자동 리뷰 → 시험 사이트에 반영 → 대표님이 텔레그램에서 &quot;배포&quot; 한 마디 → 운영 반영입니다. 이 승인 한 단계가 안전장치입니다.</p>
 <p>비용과 주의. 헤르메스는 맥미니나 서버에 24시간 떠 있어야 하고, 클로드 API 요금은 claude.ai 구독과 별개인 종량제입니다. 에이전트 8개가 하루 종일 돌면 월 수십만 원이 될 수 있어 역할별로 모델을 나눕니다. 헤르메스는 빠르게 바뀝는 프로젝트라 업데이트 때 설정이 깨질 수 있어 &quot;한 달에 한 번 점검&quot;을 잡습니다.</p>
 <p>마케팅 자동 업로드, 솤직한 현황</p>
-<table><thead><tr><th>채널</th><th>자동화 정도</th><th>어떻게</th><th>주의</th></tr></thead><tbody><tr><td>유튜브 쇼츠</td><td>완전 자동 가능</td><td>공식 API. 올인 레코드에서 쓰시던 업로드 자동화 재사용</td><td>없음</td></tr><tr><td>인스타 릴스</td><td>완전 자동 가능</td><td>공식 API. 비즈니스 계정 + 페이스북 페이지 연결 + 메타 앱 심사(1~2주)</td><td>심사를 개발과 병행해 미리 신청</td></tr><tr><td>네이버 블로그</td><td>기술적으로는 가능, 권하지 않음</td><td>공식 글쓰기 API 없음. 브라우저를 흉내 내 자동 발행하는 프로그램은 있음(크몽에 10만~50만원대 여러 개)</td><td>판매자도 &quot;계정 정지 100% 보장 불가&quot;라고 밝힘. 네이버는 기계 발행 대량 글을 저품질(검색 누락) 사유로 봄</td></tr></tbody></table>
-<p>네이버 블로그는 대표님 말씀대로 &quot;완전 자동화하는 프로그램&quot;이 실제로 팔리고 있습니다. 제가 확인한 바로는 크몽에 여러 개가 있고, 타이핑 효과·IP 바꾸기·금칙어 변환 같은 회피 기법을 넣어둡니다. 그런데 그 판매자들 스스로 &quot;정지 100% 보장은 어렵다&quot;고 적어 놓았고, 운영자 후기들도 &quot;초안까지 자동, 검수와 발행은 사람&quot;을 권합니다. 제 의견은 이렇습니다: 이키본은 네이버 검색이 가장 큰 유입 채널인데, 그 계정이 저품질에 걸리면 나머지 자동화를 다 해도 소용이 없습니다. 그래서 네이버는 &quot;AI가 글·사진 완성본을 텔레그램으로 보내고 → 사람이 붙여넣어 예약 발행(하루 1편, 3분)&quot;으로 가고, 정 원하시면 서브 계정 하나로 완전 자동을 시험해보는 걸 권합니다. 메인 계정은 건드리지 않는 게 맞습니다.</p>
-<p>모든 채널 공통으로, 콘텐츠는 올리기 전에 텔레그램으로 미리보기를 받고 &quot;승인&quot; 후 올리는 걸 기본값으로 합니다. 전자동 발행은 틀린 수종 이름, 틀린 관리법을 그대로 내보냅니다. 승인은 하루 5분이면 됩니다.</p>
+<table><thead><tr><th>채널</th><th>방식</th><th>빈도</th><th>매단 방법</th></tr></thead><tbody><tr><td>유튜브 쇼츠</td><td>완전 자동 (공식 API)</td><td>주 2~3편</td><td>올인 레코드 업로드 자동화 재사용</td></tr><tr><td>인스타 릴스</td><td>완전 자동 (공식 API)</td><td>주 2~3편</td><td>비즈니스 계정 + 페이스북 페이지 + 메타 앱 심사(1~2주), 심사는 개발과 병행 신청</td></tr><tr><td>네이버 블로그</td><td>완전 자동 (브라우저 자동 발행)</td><td>주 1~2편</td><td>공식 글쓰기 API가 없어 브라우저를 자동 조작해 발행. 소량이라 대량 발행 제재 대상이 아님</td></tr></tbody></table>
+<p>네이버 블로그는 공식 글쓰기 API가 없어서 브라우저를 자동으로 조작해 발행합니다. 네이버가 제재하는 건 기계로 찍어내는 대량 글이고, 이키본은 주 1~2편을 올리므로 그 범위에 들어가지 않습니다. 글은 실제 작업 사진과 관리 정보를 담은 긴 글로 쓰고, 발행 시간을 매번 달리하며, 같은 글을 다른 채널에 그대로 복사하지 않는 것이 유지 조건입니다. 만에 하나 검색 누락이 생기면 서브 계정으로 이어갈 수 있게 콘텐츠 원본은 사이트 쪽에 보관합니다.</p>
+<p>세 채널 모두 콘텐츠 제작부터 발행까지 김 대표 쪽에서 자동으로 돌아가고, 분재원 대표는 작업 사진과 영상만 올려주면 됩니다. 발행 전 확인이 필요한 글(가격·정책이 들어간 글)만 텔레그램으로 미리보기를 보내고, 나머지는 예약 시간에 그대로 나갑니다.</p>
 <h2 id="일정-단축하는-방법과-단계"><span class="num">11.</span> 추진 일정</h2>
 <p>원래 8~9주로 잡았던 사이트를 6주로 당길 수 있고, 헤르메스와 마케팅까지 합쳤을 때 2027년 2월 초 정식 오픈이 현실적인 목표입니다. 당기는 방법은 세 가지입니다.</p>
 <ol><li><p>이 데모 화면 10개가 그대로 개발 설계서가 됩니다. 화면 설계에 드는 1~2주가 없어집니다.</p></li><li><p>한국 연동(결제·로그인·알림톡·주소)를 쇼핑몰 기본 개발과 병렬로 진행합니다. 클로드 코드 서브에이전트 2개가 동시에 일하면 됩니다.</p></li><li><p>메타(인스타) 앱 심사, 통신판매업 신고, 결제사 계약처럼 &quot;기다리는 일&quot;은 첫 주에 다 신청합니다.</p></li></ol>
-<table><thead><tr><th>단계</th><th>기간</th><th>나오는 것</th><th>끝났다고 보는 기준</th></tr></thead><tbody><tr><td>0. 준비</td><td>10.20~10.31 (2주)</td><td>프로젝트 폴더, CLAUDE.md, 에이전트 8개 정의, 분재원 파트너 계약, 결제사·알림톡·메타 신청</td><td>클로드 코드가 폴더를 열면 맥락을 다 아는 상태</td></tr><tr><td>1. 쇼핑몰 기본</td><td>11.2~11.27 (4주)</td><td>홈·목록·상세·장바구니·관리자, 나무 20그루 실제 등록</td><td>대표님이 휴대폰으로 나무 한 그루를 시험 주문</td></tr><tr><td>2. 한국 연동</td><td>11.16~12.4 (3주, 1과 겹침)</td><td>포트원 결제, 카카오·네이버 로그인, 알림톡, 도로명주소, 발송 요일 규칙</td><td>실제 카드로 1,000원 결제→취소 성공, 알림톡 도착</td></tr><tr><td>3. 옵션 서비스</td><td>11.30~12.18 (3주)</td><td>분갈이 시기 규칙, 철사 공임표, 사리 AI(모델 시험 포함), 서비스 요청 관리 화면</td><td>사리 요청→견적→승인→결제 한 바퀴가 돌아감</td></tr><tr><td>4. 커뮤니티</td><td>12.7~12.24 (3주)</td><td>일지, 게시판, Q&amp;A, 관리 알림 자동 생성</td><td>구매한 나무가 일지에 자동 등록, 알림 예약됨</td></tr><tr><td>— 비공개 시험</td><td>1.4</td><td>지인 10명이 실제 구매</td><td>고사·파손 없이 배송 완료</td></tr><tr><td>5. 헤르메스</td><td>1.4~1.15 (2주)</td><td>텔레그램 연결, 운영 작업 모드, 코드 수정 승인 흐름</td><td>텔레그램에서 &quot;상품 등록해&quot;가 돌아감</td></tr><tr><td>6. 마케팅 자동화</td><td>1.11~1.29 (3주)</td><td>쇼츠·릴스 자동 업로드, 네이버 반자동, 주간 콘텐츠 계획</td><td>승인 한 번으로 세 채널에 나감</td></tr><tr><td>— 정식 오픈</td><td>2.1</td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th>단계</th><th>기간</th><th>나오는 것</th><th>끝났다고 보는 기준</th></tr></thead><tbody><tr><td>0. 준비</td><td>10.20~10.31 (2주)</td><td>명의 정리(사업자·결제사·도메인·계정), 프로젝트 폴더와 기준 문서, 알림톡·메타 신청, 나무 20그루 사진 접수</td><td>클로드 코드가 폴더를 열면 맥락을 다 아는 상태</td></tr><tr><td>1. 쇼핑몰 기본</td><td>11.2~11.27 (4주)</td><td>홈·목록·상세·장바구니·관리자, 나무 20그루 실제 등록</td><td>대표님이 휴대폰으로 나무 한 그루를 시험 주문</td></tr><tr><td>2. 한국 연동</td><td>11.16~12.4 (3주, 1과 겹침)</td><td>포트원 결제, 카카오·네이버 로그인, 알림톡, 도로명주소, 발송 요일 규칙</td><td>실제 카드로 1,000원 결제→취소 성공, 알림톡 도착</td></tr><tr><td>3. 옵션 서비스</td><td>11.30~12.18 (3주)</td><td>분갈이 시기 규칙, 철사 공임표, 사리 AI(모델 시험 포함), 서비스 요청 관리 화면</td><td>사리 요청→견적→승인→결제 한 바퀴가 돌아감</td></tr><tr><td>4. 커뮤니티</td><td>12.7~12.24 (3주)</td><td>일지, 게시판, Q&amp;A, 관리 알림 자동 생성</td><td>구매한 나무가 일지에 자동 등록, 알림 예약됨</td></tr><tr><td>— 비공개 시험</td><td>1.4</td><td>지인 10명이 실제 구매</td><td>고사·파손 없이 배송 완료</td></tr><tr><td>5. 헤르메스</td><td>1.4~1.15 (2주)</td><td>텔레그램 연결, 운영 작업 모드, 코드 수정 승인 흐름</td><td>텔레그램에서 &quot;상품 등록해&quot;가 돌아감</td></tr><tr><td>6. 마케팅 자동화</td><td>1.11~1.29 (3주)</td><td>쇼츠·릴스 자동 업로드, 네이버 반자동, 주간 콘텐츠 계획</td><td>승인 한 번으로 세 채널에 나감</td></tr><tr><td>— 정식 오픈</td><td>2.1</td><td></td><td></td></tr></tbody></table>
 <p>단계마다 &quot;끝났다고 보는 기준&quot;이 있어서, 각 단계가 끝날 때마다 실제로 쓸 수 있는 게 하나씩 생깁니다. 셀을 동시에 시작하면 어느 것도 완성이 안 된 채 4개월이 갑니다. 분갈이 적기가 2~3월이라 2월 초 오픈이 &quot;봄 분갈이 예약&quot; 영업에 딱 맞는 타이밍입니다.</p>
-<h2 id="아직-정해야-할-것-위험-반대-의견"><span class="num">12.</span> 결정 사항 · 위험 · 의견</h2>
-<p>정해야 할 것 네 가지:</p>
-<ul><li data-checked="false"><p><input type="checkbox" disabled> 분재원 파트너 — 누가 나무를 대고 시공하는가. 이게 없으면 옵션 서비스 전체가 없는 것과 같습니다.</p></li><li data-checked="false"><p><input type="checkbox" disabled> 결제 중계사 — 포트원(간편결제 다 포함) vs 토스페이먼츠(단순). 제 추천은 포트원.</p></li><li data-checked="false"><p><input type="checkbox" disabled> 서버 위치 — 국내(네이버클라우드·AWS 서울) vs 해외 PaaS. 국내 고객만 상대하므로 국내.</p></li><li data-checked="false"><p><input type="checkbox" disabled> 헤르메스 권한 — 운영 작업만 vs 코드 수정까지. 코드는 승인 절차를 두자는 게 제 의견.</p></li></ul>
-<p>위험과 대비:</p>
-<table><thead><tr><th>위험</th><th>일어나면</th><th>대비</th></tr></thead><tbody><tr><td>배송 중 나무 고사·파손</td><td>환불 + 후기 악화</td><td>전용 고정 박스, 월·화 발송, 특보 보류, 7일 생존 보장 비용을 가격에 미리 반영</td></tr><tr><td>사리 결과가 AI 그림과 다름</td><td>&quot;사기&quot; 분쟁</td><td>그림은 방향 예시라고 명시, 장인 견적 단계, 작업 중 사진 2회</td></tr><tr><td>네이버 계정 저품질</td><td>검색 유입 소멸</td><td>메인 계정은 사람이 발행</td></tr><tr><td>헤르메스가 운영 사이트를 깨뜨림</td><td>결제 중단</td><td>코드 수정은 승인 후 반영</td></tr><tr><td>초기 후기 0개</td><td>참고 사이트와 똑같은 허전함</td><td>처음 6개월은 일지를 전면에, 후기는 뒤에</td></tr><tr><td>AI API 비용 폭증</td><td>월 고정비 증가</td><td>역할별 모델 나눔, 사리 생성 하루 횟수 제한(데모에 &quot;오늘 남은 2회&quot; 표시)</td></tr></tbody></table>
-<p>솔직한 반대 의견 세 가지:</p>
-<p>첫째, &quot;모든 인력을 AI로 대체&quot;는 반대입니다. 사리를 깎고 나무를 포장하는 건 손으로 하는 일이고, 환불 분쟁은 사람이 막아야 합니다. AI 8 + 사람 2가 현실적인 최소 구성입니다.</p>
-<p>둘째, 사리 AI를 처음부터 자동 결제로 가면 안 됩니다. 되돌릴 수 없는 작업을 사진만 보고 약속하면 첫 사고에서 신뢰가 끝납니다. &quot;AI 컴셉 → 장인 견적&quot; 2단계가 안전하고, 오히려 상담이 들어오니 영업 접점도 됩니다.</p>
-<p>셋째, 네이버 블로그 완전 자동화는 기술적으로 되지만 메인 계정에는 쓰지 말자는 게 제 의견입니다. 이유는 위 마케팅 표에 있습니다. 대표님 생각과 다른 부분이니 서브 계정으로 시험해보고 결정하셔도 됩니다.</p>
-<p>의미: 이 틀대로 가면 국내에 없는 &quot;옵션 서비스가 붙은 분재 전문몰 + 일지 커뮤니티&quot;가 2월 초에 나옵니다. 차별점 3개(사진 그대로 + 시기 맞춘 분갈이 + 사리 상담) 중 가장 돈이 되는 건 분갈이·철사걸이 공임의 반복 매출일 가능성이 높고, 사리 AI는 사람을 불러오는 간판 역할입니다.</p>
+<h2 id="아직-정해야-할-것-위험-반대-의견"><span class="num">12.</span> 함께 정할 것 · 위험 · 의견</h2>
+<p>함께 정해야 할 것:</p><ol><li><p>명의 정리 — 사업자·통신판매업 신고, 결제사 계약, 도메인, 서버·깃허브, 카카오 채널, 네이버·인스타·유튜브 계정을 분재원 대표 명의로 만드는 순서와 일정. 김 대표는 각 계정의 관리자 권한만 받음.</p></li><li><p>결제 중계사 — 포트원(간편결제 다 포함) 또는 토스페이먼츠(단순). 추천은 포트원.</p></li><li><p>서버 위치 — 국내(네이버클라우드·AWS 서울) 추천.</p></li><li><p>공임표와 사리 가격 대 — 분재원 대표가 정해 주면 그대로 시스템에 넣음. 문서의 금액은 전부 예시.</p></li><li><p>처음 올릴 나무 20그루 — 사진(정면·좌·우·뒷면·뿌리·수피)과 규격을 11월 초까지 받으면 일정대로 감.</p></li></ol><p>위험과 대비:</p>
+<table><thead><tr><th>위험</th><th>일어나면</th><th>대비</th></tr></thead><tbody><tr><td>배송 중 나무 고사·파손</td><td>환불 + 후기 악화</td><td>전용 고정 박스, 월·화 발송, 특보 보류, 7일 생존 보장 비용을 가격에 미리 반영</td></tr><tr><td>사리 결과가 AI 그림과 다름</td><td>&quot;사기&quot; 분쟁</td><td>그림은 방향 예시라고 명시, 장인 견적 단계, 작업 중 사진 2회</td></tr><tr><td>네이버 계정 저품질</td><td>검색 유입 소멸</td><td>메인 계정은 사람이 발행</td></tr><tr><td>헤르메스가 운영 사이트를 깨뜨림</td><td>결제 중단</td><td>코드 수정은 승인 후 반영</td></tr><tr><td>초기 후기 0개</td><td>참고 사이트와 똑같은 허전함</td><td>처음 6개월은 일지를 전면에, 후기는 뒤에</td></tr><tr><td>AI API 비용 폭증</td><td>월 고정비 증가</td><td>역할별 모델 나눔, 사리 생성 하루 횟수 제한(데모에 &quot;오늘 남은 2회&quot; 표시)</td></tr></tbody></table><p>미리 말씀드리는 두 가지:</p><p>사리 작업은 AI 그림만 보고 자동으로 결제를 받지 않습니다. 되돌릴 수 없는 작업이라, 분재원 대표가 나무를 보고 가능 범위와 금액을 정한 뒤에 고객이 결제하는 순서로 만들었습니다. 그림은 고객이 방향을 고르게 하는 도구이고, 최종 판단은 사람이 합니다.</p><p>발송과 포장은 자동화해도 마지막 손은 분재원에 남습니다. 시스템이 하는 건 "언제 무엇을 보낼지"를 정리해 알려주고 송장을 만들어 두는 것까지이고, 포장해서 택배 기사에게 넘기는 건 사람의 일입니다. 이 부분의 시간을 주당 얼마나 낼 수 있는지가 처음 몇 달 판매 물량을 정합니다.</p><p>정리: 이 틀대로 가면 국내에 없는 "옵션 서비스가 붙은 분재 전문몰 + 일지 커뮤니티"가 2월 초에 나옵니다. 차별점 세 가지(사진 그대로 보내기, 시기 맞춘 분갈이, 사리 상담) 중 매출이 꾸준히 나오는 건 분갈이·철사걸이 공임일 가능성이 크고, 사리 AI는 사람을 불러오는 간판 역할입니다.</p>
 <hr>
 <p>참고: <a href="https://www.bonsaiplaza.com/en/">Bonsai Plaza</a> · <a href="https://docs.medusajs.com/learn/introduction/build-with-llms-ai/agentic-skills/index.html.md">Medusa Agent Skills</a> · <a href="https://github.com/NousResearch/hermes-agent">Hermes Agent</a> · 데모 사진: Wikimedia Commons (CC BY / CC BY-SA / CC0)</p>
 
