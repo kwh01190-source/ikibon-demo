@@ -36,7 +36,9 @@ hr{border:0;border-top:1px solid #D7D4CC;margin:36px 0 18px}
 .foot{font-family:'Noto Sans KR',sans-serif;font-size:12px;color:#555;margin-top:40px;border-top:1px solid #111;padding-top:10px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 @media (max-width:720px){
   body{font-size:14.5px} .paper{margin:0;padding:28px 18px 48px;border:0} .cover h1{font-size:24px}
-  .meta th{width:84px} h2{font-size:18px;margin-top:34px}
+  h2{font-size:18px;margin-top:34px}
+  table.meta{display:block;white-space:normal;overflow:visible} .meta tbody{display:block} .meta tr{display:grid;grid-template-columns:88px 1fr}
+  .meta th,.meta td{display:block;border:0;padding:5px 0;min-width:0;white-space:normal} .meta td{border-bottom:1px solid #E3E1DB} .meta td[colspan]{grid-column:1 / -1}
   table{display:block;overflow-x:auto;white-space:nowrap} td,th{white-space:normal;min-width:110px}
   p{text-align:left}
 }
